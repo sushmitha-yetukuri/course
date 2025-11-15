@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java + Data Structures & Algorithms - Apna College</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Apna College</h1>
+            <a href="index.html" class="back-link">← Back to Courses</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="course-detail">
+            <div class="course-header">
+                <img src="https://via.placeholder.com/800x400/E94B3C/ffffff?text=Java+%2B+DSA" alt="Java DSA Course">
+                <div class="course-info">
+                    <h1>Java + Data Structures & Algorithms</h1>
+                    <p class="course-subtitle">Build strong foundation in Java and master DSA for coding interviews</p>
+                    
+                    <div class="course-stats">
+                        <div class="stat">
+                            <strong>⏱️ Duration:</strong> 45 hours
+                        </div>
+                        <div class="stat">
+                            <strong>📊 Level:</strong> Beginner to Advanced
+                        </div>
+                        <div class="stat">
+                            <strong>👥 Students:</strong> 15,892
+                        </div>
+                        <div class="stat">
+                            <strong>⭐ Rating:</strong> 4.8/5
+                        </div>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="price-large">₹2,799</span>
+                        <button class="btn btn-buy" onclick="goToPayment('Java + Data Structures & Algorithms', 2799)">Buy This Course</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-content-detail">
+                <h2>What You'll Learn</h2>
+                <ul class="features-list">
+                    <li>✅ Java programming from basics to advanced</li>
+                    <li>✅ Object-Oriented Programming (OOP) concepts</li>
+                    <li>✅ Arrays, Linked Lists, Stacks, and Queues</li>
+                    <li>✅ Trees, Graphs, and Hashing</li>
+                    <li>✅ Sorting and searching algorithms</li>
+                    <li>✅ Dynamic Programming and Greedy algorithms</li>
+                    <li>✅ Crack coding interviews at top companies</li>
+                </ul>
+
+                <h2>Course Content</h2>
+                <div class="curriculum">
+                    <div class="module">
+                        <h3>Module 1: Java Fundamentals</h3>
+                        <p>Learn Java syntax, variables, loops, and functions</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 2: Object-Oriented Programming</h3>
+                        <p>Master OOP concepts and design patterns</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 3: Linear Data Structures</h3>
+                        <p>Learn arrays, linked lists, stacks, and queues</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 4: Non-Linear Data Structures</h3>
+                        <p>Understand trees, graphs, and hash tables</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 5: Algorithms</h3>
+                        <p>Master sorting, searching, and optimization algorithms</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 6: Interview Preparation</h3>
+                        <p>Practice problems and mock interviews</p>
+                    </div>
+                </div>
+
+                <h2>Prerequisites</h2>
+                <p>No prior programming experience required. Perfect for beginners!</p>
+
+                <div class="cta-section">
+                    <h2>Ready to Master Java & DSA?</h2>
+                    <button class="btn btn-buy btn-large" onclick="goToPayment('Java + Data Structures & Algorithms', 2799)">Enroll Now - ₹2,799</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Apna College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function goToPayment(courseName, price) {
+            sessionStorage.setItem('selectedCourse', courseName);
+            sessionStorage.setItem('selectedPrice', price);
+            window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+</html>

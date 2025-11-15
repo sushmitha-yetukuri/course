@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Web Development - Apna College</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Apna College</h1>
+            <a href="index.html" class="back-link">← Back to Courses</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="course-detail">
+            <div class="course-header">
+                <img src="images/wd.jpeg" alt="Web Development Course">
+                <div class="course-info">
+                    <h1>Complete Web Development</h1>
+                    <p class="course-subtitle">Master HTML, CSS, JavaScript, React, and backend development</p>
+                    
+                    <div class="course-stats">
+                        <div class="stat">
+                            <strong>⏱️ Duration:</strong> 40 hours
+                        </div>
+                        <div class="stat">
+                            <strong>📊 Level:</strong> Beginner to Advanced
+                        </div>
+                        <div class="stat">
+                            <strong>👥 Students:</strong> 12,543
+                        </div>
+                        <div class="stat">
+                            <strong>⭐ Rating:</strong> 4.8/5
+                        </div>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="price-large">₹2,999</span>
+                        <button class="btn btn-buy" onclick="goToPayment('Complete Web Development', 2999)">Buy This Course</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-content-detail">
+                <h2>What You'll Learn</h2>
+                <ul class="features-list">
+                    <li>✅ Build responsive websites with HTML5 and CSS3</li>
+                    <li>✅ Master JavaScript fundamentals and ES6+ features</li>
+                    <li>✅ Create dynamic web apps with React.js</li>
+                    <li>✅ Learn Node.js and Express for backend development</li>
+                    <li>✅ Work with databases (MongoDB, SQL)</li>
+                    <li>✅ Deploy full-stack applications to the cloud</li>
+                    <li>✅ Build 10+ real-world projects for your portfolio</li>
+                </ul>
+
+                <h2>Course Content</h2>
+                <div class="curriculum">
+                    <div class="module">
+                        <h3>Module 1: HTML & CSS Fundamentals</h3>
+                        <p>Learn the building blocks of web development</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 2: JavaScript Mastery</h3>
+                        <p>Master JavaScript from basics to advanced concepts</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 3: React.js Development</h3>
+                        <p>Build modern single-page applications with React</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 4: Backend with Node.js</h3>
+                        <p>Create powerful server-side applications</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 5: Database Integration</h3>
+                        <p>Work with MongoDB and SQL databases</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 6: Full-Stack Projects</h3>
+                        <p>Build and deploy complete web applications</p>
+                    </div>
+                </div>
+
+                <h2>Prerequisites</h2>
+                <p>No prior programming experience required. Just bring your enthusiasm to learn!</p>
+
+                <div class="cta-section">
+                    <h2>Ready to Start Your Web Development Journey?</h2>
+                    <button class="btn btn-buy btn-large" onclick="goToPayment('Complete Web Development', 2999)">Enroll Now - ₹2,999</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Apna College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function goToPayment(courseName, price) {
+            // Store course details in sessionStorage
+            sessionStorage.setItem('selectedCourse', courseName);
+            sessionStorage.setItem('selectedPrice', price);
+            // Redirect to payment page
+            window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+</html>

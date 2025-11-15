@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysql master course- Apna College</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Apna College</h1>
+            <a href="index.html" class="back-link">← Back to Courses</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="course-detail">
+            <div class="course-header">
+                <img src="images/mysql.png" alt="MySql Course">
+                <div class="course-info">
+                    <h1>MySql</h1>
+                    <p class="course-subtitle">This MySQL course teaches you essential SQL skills to store, manage, and retrieve data for real-world applications</p>
+                    
+                    <div class="course-stats">
+                        <div class="stat">
+                            <strong>⏱️ Duration:</strong> 100 hours
+                        </div>
+                        <div class="stat">
+                            <strong>📊 Level:</strong> Advanced
+                        </div>
+                        <div class="stat">
+                            <strong>👥 Students:</strong> 8,654
+                        </div>
+                        <div class="stat">
+                            <strong>⭐ Rating:</strong> 4.7/5
+                        </div>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="price-large">₹12,999</span>
+                        <button class="btn btn-buy" onclick="goToPayment('MySQL Masterclass', 12999)">Buy This Course</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-content-detail">
+                <h2>What You'll Learn</h2>
+                <ul class="features-list">
+                    <li>✅ SQL basics: SELECT, INSERT, UPDATE, DELETE</li>
+<li>✅ Database design and normalization</li>
+<li>✅ Joins, subqueries, and aggregations</li>
+<li>✅ Indexing and query optimization</li>
+<li>✅ Stored procedures, functions, and triggers</li>
+<li>✅ User management and database security</li>
+<li>✅ Building real-world database applications</li>
+
+                </ul>
+
+                <h2>Course Content</h2>
+<div class="curriculum">
+    <div class="module">
+        <h3>Module 1: Introduction to Databases</h3>
+        <p>Understand what databases are and why MySQL is used</p>
+    </div>
+    <div class="module">
+        <h3>Module 2: SQL Fundamentals</h3>
+        <p>Learn SELECT, INSERT, UPDATE, DELETE queries</p>
+    </div>
+    <div class="module">
+        <h3>Module 3: Database Design</h3>
+        <p>Master ER diagrams, normalization, and schema creation</p>
+    </div>
+    <div class="module">
+        <h3>Module 4: Advanced SQL Queries</h3>
+        <p>Work with joins, subqueries, and aggregate functions</p>
+    </div>
+    <div class="module">
+        <h3>Module 5: Stored Procedures & Triggers</h3>
+        <p>Automate tasks using MySQL functions, procedures, and triggers</p>
+    </div>
+    <div class="module">
+        <h3>Module 6: Optimization & Security</h3>
+        <p>Learn indexing, query optimization, and user privileges</p>
+    </div>
+</div>
+
+<h2>Prerequisites</h2>
+<p>No prerequisites required. Perfect for beginners starting with SQL and databases!</p>
+
+                <div class="cta-section">
+                    <h2>Ready to Master MySQL?</h2>
+                    <button class="btn btn-buy btn-large" onclick="goToPayment('MySQL Masterclass', 12999)">Enroll Now - ₹12,999</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Apna College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function goToPayment(courseName, price) {
+            sessionStorage.setItem('selectedCourse', courseName);
+            sessionStorage.setItem('selectedPrice', price);
+            window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+</html>

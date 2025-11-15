@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science & Machine Learning - Apna College</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Apna College</h1>
+            <a href="index.html" class="back-link">← Back to Courses</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="course-detail">
+            <div class="course-header">
+                <img src="https://via.placeholder.com/800x400/50C878/ffffff?text=Data+Science+%26+Machine+Learning" alt="Data Science Course">
+                <div class="course-info">
+                    <h1>Data Science & Machine Learning</h1>
+                    <p class="course-subtitle">Learn Python, data analysis, ML algorithms, and build real-world AI projects</p>
+                    
+                    <div class="course-stats">
+                        <div class="stat">
+                            <strong>⏱️ Duration:</strong> 50 hours
+                        </div>
+                        <div class="stat">
+                            <strong>📊 Level:</strong> Intermediate
+                        </div>
+                        <div class="stat">
+                            <strong>👥 Students:</strong> 9,321
+                        </div>
+                        <div class="stat">
+                            <strong>⭐ Rating:</strong> 4.9/5
+                        </div>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="price-large">₹3,499</span>
+                        <button class="btn btn-buy" onclick="goToPayment('Data Science & Machine Learning', 3499)">Buy This Course</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-content-detail">
+                <h2>What You'll Learn</h2>
+                <ul class="features-list">
+                    <li>✅ Python programming for data science</li>
+                    <li>✅ Data analysis with Pandas and NumPy</li>
+                    <li>✅ Data visualization with Matplotlib and Seaborn</li>
+                    <li>✅ Machine Learning algorithms from scratch</li>
+                    <li>✅ Deep Learning with TensorFlow and Keras</li>
+                    <li>✅ Natural Language Processing (NLP)</li>
+                    <li>✅ Build and deploy ML models</li>
+                </ul>
+
+                <h2>Course Content</h2>
+                <div class="curriculum">
+                    <div class="module">
+                        <h3>Module 1: Python for Data Science</h3>
+                        <p>Master Python fundamentals and libraries for data science</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 2: Data Analysis & Visualization</h3>
+                        <p>Learn to analyze and visualize data effectively</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 3: Machine Learning Basics</h3>
+                        <p>Understand ML concepts and implement algorithms</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 4: Advanced ML Techniques</h3>
+                        <p>Deep dive into advanced machine learning methods</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 5: Deep Learning</h3>
+                        <p>Build neural networks and deep learning models</p>
+                    </div>
+                    <div class="module">
+                        <h3>Module 6: Real-World Projects</h3>
+                        <p>Apply your skills to industry-relevant projects</p>
+                    </div>
+                </div>
+
+                <h2>Prerequisites</h2>
+                <p>Basic programming knowledge recommended. We'll cover Python fundamentals from scratch.</p>
+
+                <div class="cta-section">
+                    <h2>Ready to Become a Data Scientist?</h2>
+                    <button class="btn btn-buy btn-large" onclick="goToPayment('Data Science & Machine Learning', 3499)">Enroll Now - ₹3,499</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Apna College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function goToPayment(courseName, price) {
+            sessionStorage.setItem('selectedCourse', courseName);
+            sessionStorage.setItem('selectedPrice', price);
+            window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+</html>

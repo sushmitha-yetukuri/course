@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - Apna College</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Apna College</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="success-section">
+            <div class="success-container">
+                <div class="success-icon">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="36" stroke="#4CAF50" stroke-width="8"/>
+                        <path d="M25 40L35 50L55 30" stroke="#4CAF50" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <h1>🎉 Payment Successful!</h1>
+                <p class="success-message">Thank you for your purchase. Your enrollment is confirmed!</p>
+
+                <div class="success-details">
+                    <h3>Payment Details</h3>
+                    <div class="detail-row">
+                        <span class="detail-label">Payment ID:</span>
+                        <span class="detail-value" id="paymentIdDisplay">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Order ID:</span>
+                        <span class="detail-value" id="orderIdDisplay">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Course:</span>
+                        <span class="detail-value" id="courseNameDisplay">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Amount Paid:</span>
+                        <span class="detail-value" id="amountDisplay">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Date & Time:</span>
+                        <span class="detail-value" id="dateDisplay">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Student Name:</span>
+                        <span class="detail-value" id="nameDisplay">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value" id="emailDisplay">-</span>
+                    </div>
+                </div>
+
+                <div class="next-steps">
+                    <h3>What's Next?</h3>
+                    <ul>
+                        <li>✅ A confirmation email has been sent to your registered email address</li>
+                        <li>✅ You can access your course from the dashboard</li>
+                        <li>✅ Check your email for login credentials</li>
+                        <li>✅ Start learning immediately!</li>
+                    </ul>
+                </div>
+
+                <div class="success-actions">
+                    <a href="index.html" class="btn btn-primary">Browse More Courses</a>
+                    <button onclick="window.print()" class="btn btn-secondary">Print Receipt</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Apna College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            // Get payment data from localStorage
+            const paymentDataStr = localStorage.getItem('lastPayment');
+            
+            if (!paymentDataStr) {
+                alert('No payment information found. Redirecting to home page.');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            const paymentData = JSON.parse(paymentDataStr);
+
+            // Display payment details
+            document.getElementById('paymentIdDisplay').textContent = paymentData.paymentId;
+            
+            // Display order ID if available (Razorpay integration)
+            if (paymentData.orderId) {
+                document.getElementById('orderIdDisplay').textContent = paymentData.orderId;
+            } else {
+                document.getElementById('orderIdDisplay').textContent = 'N/A';
+            }
+            
+            document.getElementById('courseNameDisplay').textContent = paymentData.courseName;
+            document.getElementById('amountDisplay').textContent = '₹' + paymentData.amount;
+            document.getElementById('dateDisplay').textContent = paymentData.date;
+            document.getElementById('nameDisplay').textContent = paymentData.fullName;
+            document.getElementById('emailDisplay').textContent = paymentData.email;
+
+            // Clear sessionStorage
+            sessionStorage.removeItem('selectedCourse');
+            sessionStorage.removeItem('selectedPrice');
+            sessionStorage.removeItem('paymentId');
+        };
+    </script>
+</body>
+</html>

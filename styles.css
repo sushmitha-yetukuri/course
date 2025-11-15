@@ -1,0 +1,595 @@
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: opacity 0.3s;
+}
+
+.back-link:hover {
+    opacity: 0.8;
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+main {
+    padding: 3rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+/* ============================================
+   COURSES SECTION
+   ============================================ */
+.courses-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2d3748;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.course-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 1.5rem;
+}
+
+.course-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.course-description {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.course-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.course-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+/* ============================================
+   COURSE DETAIL PAGE
+   ============================================ */
+.course-detail {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-header {
+    margin-bottom: 3rem;
+}
+
+.course-header img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.course-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.course-subtitle {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+.course-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat {
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    color: white;
+}
+
+.price-large {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.course-content-detail h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.features-list li {
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+}
+
+.curriculum {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.module {
+    padding: 1.5rem;
+    background: #f7fafc;
+    border-left: 4px solid #667eea;
+    border-radius: 8px;
+}
+
+.module h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+}
+
+.module p {
+    color: #4a5568;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: #f7fafc;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+.cta-section h2 {
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   PAYMENT PAGE
+   ============================================ */
+.payment-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.payment-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2d3748;
+}
+
+.order-summary {
+    background: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.order-summary h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.payment-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.payment-methods {
+    margin: 2rem 0;
+}
+
+.payment-methods h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.payment-options {
+    display: grid;
+    gap: 1rem;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.payment-option:hover {
+    border-color: #667eea;
+    background: #f7fafc;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 1rem;
+}
+
+.payment-option span {
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   SUCCESS PAGE
+   ============================================ */
+.success-section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.success-container {
+    background: white;
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.success-icon {
+    margin: 0 auto 2rem;
+    width: 80px;
+    height: 80px;
+}
+
+.success-container h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.success-message {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+.success-details {
+    background: #f7fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.success-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    text-align: center;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.detail-value {
+    color: #2d3748;
+    text-align: right;
+}
+
+.next-steps {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.next-steps h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.next-steps ul {
+    list-style: none;
+}
+
+.next-steps li {
+    padding: 0.5rem 0;
+    color: #4a5568;
+}
+
+.success-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+}
+
+.btn-buy {
+    background: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.btn-buy:hover {
+    background: #45a049;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.btn-pay {
+    background: #667eea;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.btn-pay:hover {
+    background: #5568d3;
+}
+
+.btn-pay:disabled {
+    background: #a0aec0;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+    background: #f7fafc;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .course-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .price-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .payment-container,
+    .success-container {
+        padding: 1.5rem;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .success-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .course-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
